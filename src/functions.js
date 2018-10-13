@@ -14,7 +14,7 @@ module.exports = {
         let minElement = 0;
         if (array.length <= 5) {
             console.log('duzina niza mora biti veca od 5 elementa');
-            return;
+            return -1;
         }
         array.forEach((element) => {
             if (typeof (element) === 'number') {
@@ -26,6 +26,7 @@ module.exports = {
         }
         minElement = Math.min(...numbers);
         console.log(minElement);
+        return minElement;
     },
 
     minIntegerFromString(string) {
@@ -43,5 +44,6 @@ module.exports = {
         const sign = type === 0 ? 1 : -1;
         const arrayString = arrayOfStrings.sort((a, b) => sign * (a.length - b.length)).join('');
         console.log(arrayString);
+        return arrayString;
     },
 };
